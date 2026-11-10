@@ -1,0 +1,6 @@
+{
+  "name": "Sistem Administrasi Surat Tugas & SPPD SDN 1 Pujiharjo",
+  "description": "Aplikasi administrasi kedinasan pembuatan, pengeditan, penyimpanan, pengelolaan, dan pencetakan Surat Tugas serta SPPD resmi SD Negeri 1 Pujiharjo, Kec. Tirtoyudo, Kab. Malang.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@layer utilities {
+  /* A4 Paper Dimensions */
+  .a4-sheet {
+    width: 210mm;
+    min-height: 297mm;
+    background-color: #ffffff;
+    box-sizing: border-box;
+  }
+}
+
+/* Custom print media styles */
+@media print {
+  @page {
+    size: 210mm 297mm;
+    margin: 12mm 15mm 12mm 15mm;
+  }
+
+  body {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  .a4-sheet {
+    width: 100% !important;
+    min-height: auto !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    page-break-after: always;
+    break-after: page;
+  }
+
+  .a4-sheet:last-child {
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+}
+
+/* Screen Preview Styling */
+@media screen {
+  .print-only {
+    display: none !important;
+  }
+
+  .a4-preview-container {
+    background-color: #f1f5f9;
+  }
+
+  .a4-sheet {
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  }
+}
